@@ -1,0 +1,5 @@
+copy C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct1990.csv C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct1990.dta
+copy C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct2000.csv C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct2000.dta
+copy C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct2010.csv C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/ct2010.dta
+copy C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/zt2000.csv C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/zt2000.dta
+copy C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/zt2010.csv C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/zt2010.dta
