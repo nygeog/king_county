@@ -1,0 +1,2 @@
+copy V:\Dropbox\GIS\Projects\king_county\data\processing\tables\tracts_2000_esri_pop.csv V:\Dropbox\GIS\Projects\king_county\data\processing\tables\tracts_2000_esri_pop.dta
+copy V:\Dropbox\GIS\Projects\king_county\data\processing\tables\tracts_2000_land_water_area.csv V:\Dropbox\GIS\Projects\king_county\data\processing\tables\tracts_2000_land_water_area.dta
