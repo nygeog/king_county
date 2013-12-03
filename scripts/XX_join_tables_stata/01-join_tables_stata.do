@@ -1,15 +1,17 @@
-use E:\Dropbox\GIS\Projects\king_county\data\input\kco_regeocode_bygooglemap\kco_regeocode_bygooglemap_TK.dta 
-merge m:1 BEH_ID using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct1990.dta"
+use Y:\Dropbox\GIS\Projects\king_county\data\input\kco_regeocode_bygooglemap\kco_regeocode_bygooglemap_TK.dta 
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct1990.dta"
 drop _merge
-merge m:1 BEH_ID using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct2000.dta"
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct2000.dta"
 drop _merge
-merge m:1 BEH_ID using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct2010.dta"
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\ct2010.dta"
 drop _merge
-merge m:1 BEH_ID using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\zt2000.dta"
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\zt2000.dta"
 drop _merge
-merge m:1 BEH_ID using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\zt2010.dta"
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\zt2010.dta"
 drop _merge
-merge m:1 g_ct2000 using "E:\Dropbox\GIS\Projects\king_county\data\processing\tables\kings_county_census_data.dta"
+merge m:1 g_ct2000 using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\kings_county_census_data.dta"
+drop _merge
+merge m:1 BEH_ID using "Y:\Dropbox\GIS\Projects\king_county\data\processing\tables\utm_xy_round.dta"
 drop _merge
 
-save "E:\Dropbox\GIS\Projects\king_county\data\output\kings_county_census.dta", replace
+save "Y:\Dropbox\GIS\Projects\king_county\data\output\kings_county_census.dta", replace
