@@ -14,6 +14,7 @@ Tasks
 tractid, population, land_area, business counts, 5kmbufpop, 5km land area 5km business counts
 
 
+
 2. Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
 
 
