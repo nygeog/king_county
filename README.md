@@ -17,7 +17,7 @@ tractid, population, land_area, business counts, 5kmbufpop, 5km land area 5km bu
 
 2. Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
 
-
+<!---
 Scripts
 =======
 
@@ -42,3 +42,6 @@ The following are the list of folders with scripts for this project:
 99-clean_up.py
 
 XX_join_tables_stata
+-->
+
+end. 
