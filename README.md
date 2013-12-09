@@ -4,6 +4,22 @@ This project takes place in King County, Washington. The data involved is cardio
 
 
 
+
+
+Tasks
+=====
+
+1. Gina would like the population and land area and business counts for all King County census tracts, not just the ones UW provided data on
+
+tractid, population, land_area, business counts, 5kmbufpop, 5km land area 5km business counts
+
+
+2. Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
+
+
+Scripts
+=======
+
 The following are the list of folders with scripts for this project:
 
 00_dir_struct
@@ -25,4 +41,3 @@ The following are the list of folders with scripts for this project:
 99-clean_up.py
 
 XX_join_tables_stata
-
