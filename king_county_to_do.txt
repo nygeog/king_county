@@ -1,0 +1,36 @@
+Hi Danny,
+ 
+I met with Gina this morning and we came up with the following procedure for NETS, in order of priority:
+ 
+As soon as the re-geocoded Geosupport locations (g1/g2) are ready, please give them to me so I can update the final_xy.  I will flip this back to you very quickly.  Also, please provide me with the King County data as soon as a census tract id is appended for the final_xys.  From what I understood yesterday, both of these are very near completion.
+ 
+1.       Using the final_xy that I provide you for NY NETS, please generate uncollapsed counts for 2010 for PATS participants.  Andrew would like you to generate the 2010 NETS business counts for each of the 28 flags for the following neighborhood definitions:  hulls, radial and network buffer
+a.       I will need the 2010 PA radial buffer counts (and hull counts if already available) for PATS so I can update my thesis (upcoming abstract deadline)
+2.       Gina would like you to please collapse using the X,Y within a tight threshold.  She thought 10m should be appropriate, but would like your opinion on the matter.  Also, her impression was that you would be the one to dissolve/ do the collapse with this new method (collapsing on projected final_xy and year and finest flag).
+a.       We weren’t sure whether it makes sense to test this collapse approach on a sample of our NY data so we can check whether it makes sense to collapse those addresses together.  What are your thoughts on doing a trial run vs running the whole batch?
+b.      We would like to collapse our NY NETS data first, then collapse King County NETS.
+                                                               i.      I need the collapsed 2010 NYC PA venues for PATS as soon as the data are available (upcoming abstract deadline for my thesis)
+3.       Gina would like the population and land area and business counts for all King County census tracts, not just the ones UW provided data on
+4.      Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
+
+Please let us know if you have any questions or concerns with any of these.
+ 
+Thanks for your help!
+Tanya
+ 
+ 
+Tanya K. Kaufman, MPH, CPH
+Project Coordinator/ Data Analyst
+Built Environment and Health Research Group
+Department of Epidemiology
+Mailman School of Public Health
+Columbia University
+Allan Rosenfield Building
+722 West 168th Street, R720.26
+New York, NY 10032
+tkk2109@columbia.edu
+www.beh.columbia.edu
+
+
+
+53 033

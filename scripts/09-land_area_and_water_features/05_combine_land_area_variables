@@ -1,0 +1,18 @@
+use W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_2000_land_area.dta 
+gen g_ct2000 = tractid
+drop tractid
+save "W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_2000_land_area.dta", replace
+use W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_centroid_b5km_land_area.dta
+gen g_ct2000 = tractid
+drop tractid
+save "W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_centroid_b5km_land_area.dta", replace
+use W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_2000_land_area.dta 
+merge 1:1 g_ct2000 using "W:\GIS\Projects\king_county\data\processing\tables\land_area\tract_centroid_b5km_land_area.dta"
+drop _merge
+label data "Census Tract 2000"
+label data "Census Tract 2000 Land Areas"
+label variable origtractarea "Original Tract Area Square Meters"
+label variable land_area_sq_meters "Tract Land Area Square Meters"
+label variable g_ct2000 "Census Tract 2000 ID"
+label variable b5km_land_area_sq_meters "Census Tract Centroid with 5 km radial buffer Land Area in Square Meters"
+save "W:\GIS\Projects\king_county\data\processing\output\land_area\tract_2000_land_area_and_buf_5km_land_area.dta", replace 
