@@ -17,6 +17,60 @@ tractid, population, land_area, business counts, 5kmbufpop, 5km land area 5km bu
 
 2. Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
 
+
+
+using the 2000 boundaries, for each of the 21 years. 1990-2010. raw is uncollasped, + collapsed. 
+
+Do I have a variable called Census year, census tract followed by year. 
+
+
+so format the data longways
+
+so each census tract
+
+unique id 
+
+
+tract (11 dig) + year (1990-2010)
+
+
+tractid + 1990
+			1991
+			1992
+			1993
+
+
+Use 
+
+Do for all 25 business types
+
+25 column for counts each biz type
+
+Needs 7833 rows
+
+OV extension on biz field is raw
+OV_col is the collapsed
+
+
+
+
+just use the Stata Labels, not data diciotnary. 
+
+
+gen newfield 
+
+
+for nyc use 2010, same exercise for John Logan's data. 
+
+KingCountyONLY_qr_count_raw&collapsed.dta (file want it to look like)
+
+tn = number (count) tract number
+
+bn = buffer number 
+
+
+
+
 <!---
 Scripts
 =======
