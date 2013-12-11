@@ -71,6 +71,8 @@ bn = buffer number
 
 finestflag_OV is what we are interested in.
 
+a frequency on BEH_ID;finestflag_OV
+
 <!---
 Scripts
 =======
