@@ -69,7 +69,7 @@ tn = number (count) tract number
 bn = buffer number 
 
 
-
+finestflag_OV is what we are interested in.
 
 <!---
 Scripts
