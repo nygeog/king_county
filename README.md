@@ -2,8 +2,8 @@ King County NETS
 ===========
 This project takes place in King County, Washington. The data involved is cardiovascular outcome data (which I don't have access to) and NETS business data (what is the time frame? range? Could reference NETS data years).
 
-
-
+Set is 378091, only 378086 within valid xy bounds of UTM NAD83 Zone 10N (meters)
+Then 377363 in the county of King County
 
 
 Tasks
