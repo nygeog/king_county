@@ -1,0 +1,3 @@
+king county pts						378091
+king county pts valid xy			378086 368534
+king county pts valid xy king county377363 367840

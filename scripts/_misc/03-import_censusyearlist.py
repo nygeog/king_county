@@ -1,0 +1,3 @@
+arcpy.CreateFileGDB_management("W:/GIS/Projects/king_county/data/processing/tables/censusyear_list","censusyear_list","CURRENT")
+
+arcpy.TableToTable_conversion("W:/GIS/Projects/king_county/data/processing/tables/censusyear_list/censusyear_list.csv","W:/GIS/Projects/king_county/data/processing/tables/censusyear_list/censusyear_list.gdb","censusyear_list","#","""censusyear "censusyear" true true false 15 Text 0 0 ,First,#,W:/GIS/Projects/king_county/data/processing/tables/censusyear_list/censusyear_list.csv,censusyear,-1,-1""","#")

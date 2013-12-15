@@ -34,7 +34,7 @@ types inline
 ;
 #delimit cr
 
-copy E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct1990.csv stata E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct1990.dta 
+copy W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct1990.txt stata W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct1990.dta 
 
 #delimit ;
 types inline
@@ -42,7 +42,7 @@ types inline
 ;
 #delimit cr
 
-copy E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct2000.csv E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct2000.dta
+copy W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct2000.txt W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct2000.dta
 
 #delimit ;
 types inline
@@ -50,7 +50,7 @@ types inline
 ;
 #delimit cr
 
-copy E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct2010.csv E:/Dropbox/GIS/Projects/king_county/data/processing/tables/ct2010.dta
+copy W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct2010.txt W:/GIS/Projects/king_county/data/processing/tables/census_geographies/ct2010.dta
 
 #delimit ;
 types inline
@@ -58,7 +58,7 @@ types inline
 ;
 #delimit cr
 
-copy E:/Dropbox/GIS/Projects/king_county/data/processing/tables/zt2000.csv E:/Dropbox/GIS/Projects/king_county/data/processing/tables/zt2000.dta
+copy W:/GIS/Projects/king_county/data/processing/tables/census_geographies/zt2000.txt W:/GIS/Projects/king_county/data/processing/tables/census_geographies/zt2000.dta
 
 #delimit ;
 types inline
@@ -66,6 +66,6 @@ types inline
 ;
 #delimit cr
 
-copy E:/Dropbox/GIS/Projects/king_county/data/processing/tables/zt2010.csv E:/Dropbox/GIS/Projects/king_county/data/processing/tables/zt2010.dta
+copy W:/GIS/Projects/king_county/data/processing/tables/census_geographies/zt2010.txt W:/GIS/Projects/king_county/data/processing/tables/census_geographies/zt2010.dta
 
 quit

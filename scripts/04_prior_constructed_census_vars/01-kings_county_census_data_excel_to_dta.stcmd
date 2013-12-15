@@ -20,6 +20,6 @@ set time-fmt-write     "%0H:%0M:%0S"
 set datetime-fmt-write "%m/%d/%Y %0H:%0M:%0S"
 set num-miss-wr        none
 
-copy  C:/Users/DanielMSheehan/Desktop/king_county/data/input/kco_regeocode_bygooglemap/KingCoWA_censusTracts.xlsx stata C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/kings_county_census_data.dta -T<Sheet1 
+copy  C:/Users/DanielMSheehan/Desktop/king_county/data/input/kco_regeocode_bygooglemap/KingCoWA_censusTracts.xlsx stata C:/Users/DanielMSheehan/Desktop/king_county/data/processing/tables/census_uw_vars/kings_county_census_data.dta -T<Sheet1 
 
 quit

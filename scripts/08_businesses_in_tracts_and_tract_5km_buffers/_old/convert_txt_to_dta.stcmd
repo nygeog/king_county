@@ -1,4 +1,4 @@
-// This Stat/Transfer command file was automatically generated on December 2, 2013 at 3:29 PM (v11.2.2106.0521, Windows NT 6.1 (build 7601, Service Pack 1))
+// This Stat/Transfer command file was automatically generated on December 13, 2013 at 3:45 PM (v11.2.2106.0521, Windows NT 6.1 (build 7601, Service Pack 1))
 //ENCODING UTF-8
 set numeric-names      n
 set log-level          e
@@ -28,6 +28,6 @@ set time-fmt-write     "%0H:%0M:%0S"
 set datetime-fmt-write "%m/%d/%Y %0H:%0M:%0S"
 set num-miss-wr        none
 
-copy  W:/GIS/Projects/king_county/data/processing/tables/utm_xy_round/utm_xy_round.txt stata W:/GIS/Projects/king_county/data/processing/tables/utm_xy_round/utm_xy_round.dta 
+copy  W:/GIS/Projects/king_county/data/processing/tables/nets_year_flag_tables_stata/kc_nets_5km_1990_0_freq_raw.txt stata W:/GIS/Projects/king_county/data/processing/tables/nets_year_flag_tables_stata/kc_nets_5km_1990_0_freq_raw.dta 
 
 quit
