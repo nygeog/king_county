@@ -46,7 +46,7 @@ flag_abbrevs = ["NOT_OV","BAR_OV","LIQ_OV","FSH_OV","FVM_OV","NAT_OV","MET_OV","
 # Selects and Table processing
 # -----------------------------------------------------------------------------------------------------------------
 
-print 'select by year and flag '
+print 'select by year and flag, dissolve for both, (took 16 hours for buffers and 3 hours for tracts)'
 print 'start: ' + time.strftime('%c') 
 for geog in geogs:
 	for year in range(1990,2011,1):
@@ -57,6 +57,22 @@ for geog in geogs:
 			arcpy.Dissolve_management(work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag),                        work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround",            "tractid;xyrounduid",flag_abbrev + " COUNT",           "MULTI_PART","DISSOLVE_LINES")
 			arcpy.Dissolve_management(work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround",work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround_dis_tractid","tractid",           "COUNT_" + flag_abbrev + " COUNT","MULTI_PART","DISSOLVE_LINES")
 			print "done with kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround AT - " + time.strftime('%c') 
+
+
+print 'select by year and flag '
+print 'start: ' + time.strftime('%c') 
+for geog in geogs:
+	for year in range(1990,2011,1):
+		for flag, flag_abbrev in zip(range(26), flag_abbrevs):
+			arcpy.Delete_management(work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround")
+
+print "make table views of censusyear list tables for each year and join tables of all business types, table to table (next loop is export to .txt)"
+print 'start: ' + time.strftime('%c') 
+for geog in geogs:
+	for year in range(1990,2011):
+		for flag, flag_abbrev in zip(range(26), flag_abbrevs):
+			arcpy.XToolsGP_Export2Text(work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid",                     "tractid;SUM_" +         flag_abbrev, work_path + "/tables/nets_year_flag_tables/_working/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_raw.txt","false","false")
+			arcpy.XToolsGP_Export2Text(work_path+"/nets_year_flag_select.gdb/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_dis_tractid_xyround_dis_tractid", "tractid;COUNT_COUNT_" + flag_abbrev, work_path + "/tables/nets_year_flag_tables/_working/kc_nets_" + geog + "_" + str(year) + "_" + str(flag) +"_col.txt","false","false")
 
 
 
