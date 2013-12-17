@@ -27,24 +27,24 @@ geogs = ["5km", "pol"]
 g_abbrevs = ["b","t"]
 flag_abbrevs = ["NOT_OV","BAR_OV","LIQ_OV","FSH_OV","FVM_OV","NAT_OV","MET_OV","SMK_OV","EAT_OV","CON_OV","AFF_OV","PIZ_OV","BAK_OV","BNK_OV","CRD_OV","MUL_OV","LMPA_OV","VPA_OV","WARE_OV","DES_OV","URG_OV","HP_OV","RES_OV","RX_OV","MH_OV","DDS_OV"]
 
-# Processing intersects, clips, etc. 
-# -----------------------------------------------------------------------------------------------------------------
-# print 'select valid nets xy and final_accuracy (50 seconds)'
-# print 'start: ' + time.strftime('%c') 
-# arcpy.Select_analysis(work_path+"/nets_king_county.gdb/king_county_pts",work_path+"/nets_king_county.gdb/king_county_pts_valid_xy","POINT_X > 0 AND POINT_Y > 0 AND final_accuracy <> 'Z'")
-# print 'clip nets by king county polygon (35 seconds)'
-# print 'start: ' + time.strftime('%c') 
-# arcpy.Clip_analysis(work_path+"/nets_king_county.gdb/king_county_pts_valid_xy",in_path+"/census.gdb/tracts_2000_king_county",work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county","#")
+#Processing intersects, clips, etc. 
+#-----------------------------------------------------------------------------------------------------------------
+print 'select valid nets xy and final_accuracy (50 seconds)'
+print 'start: ' + time.strftime('%c') 
+arcpy.Select_analysis(work_path+"/nets_king_county.gdb/king_county_pts",work_path+"/nets_king_county.gdb/king_county_pts_valid_xy","POINT_X > 0 AND POINT_Y > 0 AND final_accuracy <> 'Z'")
+print 'clip nets by king county polygon (35 seconds)'
+print 'start: ' + time.strftime('%c') 
+arcpy.Clip_analysis(work_path+"/nets_king_county.gdb/king_county_pts_valid_xy",in_path+"/census.gdb/tracts_2000_king_county",work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county","#")
 
-# print 'intersect tracts and businesses (nets) (1 minute)'
-# print 'start: ' + time.strftime('%c') 
-# arcpy.Intersect_analysis(work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000 #;"                 +work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county #",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_pol_nets_int","ALL","#","INPUT")
-# print 'intersect tract - centroid 5 km buffer and businesses (nets) (17 minutes)'
-# print 'start: ' + time.strftime('%c') 
-# arcpy.Intersect_analysis(work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000_centroid_5km_buf #;"+work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county #",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_5km_nets_int","ALL","#","INPUT")
+print 'intersect tracts and businesses (nets) (1 minute)'
+print 'start: ' + time.strftime('%c') 
+arcpy.Intersect_analysis(work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000 #;"                 +work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county #",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_pol_nets_int","ALL","#","INPUT")
+print 'intersect tract - centroid 5 km buffer and businesses (nets) (17 minutes)'
+print 'start: ' + time.strftime('%c') 
+arcpy.Intersect_analysis(work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000_centroid_5km_buf #;"+work_path+"/nets_king_county.gdb/king_county_pts_valid_xy_king_county #",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_5km_nets_int","ALL","#","INPUT")
 
-# Selects and Table processing
-# -----------------------------------------------------------------------------------------------------------------
+#Selects and Table processing
+#-----------------------------------------------------------------------------------------------------------------
 
 print 'select by year and flag, dissolve for both, (took 16 hours for buffers and 3 hours for tracts)'
 print 'start: ' + time.strftime('%c') 
