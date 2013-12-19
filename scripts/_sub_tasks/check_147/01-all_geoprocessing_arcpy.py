@@ -30,4 +30,4 @@ arcpy.CalculateField_management("W:/GIS/Projects/king_county/data/processing/che
 
 #IMPORT ARCTOOLBOX XTOOLS 
 
-arcpy.XToolsPro_Table2Text("W:/GIS/Projects/king_county/data/processing/check_147/check_147.gdb/check_147_join_king_county_pts_xy_ct2000_zt2000","BEH_ID;king_county_pts_final_x;king_county_pts_final_y;king_county_pts_unique_xy_round;g_ct2000;g_zt2000","W:/GIS/Projects/king_county/data/processing/check_147/tables/check_147.txt")
+arcpy.XToolsPro_Table2Text("W:/GIS/Projects/king_county/data/processing/check_147/check_147.gdb/check_147_join_king_county_pts_xy_ct2000_zt2000","BEH_ID;king_county_pts_x_round;king_county_pts_y_round;king_county_pts_xyrounduid;g_ct2000;g_zt2000","W:/GIS/Projects/king_county/data/processing/check_147/tables/check_147.txt")
