@@ -3,7 +3,7 @@ import csv
 W = "/Users/danielmsheehan/Dropbox"
 
 pr_path = W + "/GIS/Projects/king_county/data/processing"
-the_path = pr_path +"/tables/nets_year_flag_tables/_final/"
+the_path = pr_path +"/tables/nets_year_flag_tables/final/"
 
 for year in range(1990,2011):
     with open(the_path + 'kc_nets_' + str(year) + '_final.txt','r') as csvinput:

@@ -18,6 +18,6 @@ set delimiter-wr       comma
 set quote-char-wr      "
 set write-field-names  y
 
-copy  W:/GIS/Projects/king_county/data/input/nets_from_tanya_20131211/KingCounty_finalxy_flag.dta delim W:/GIS/Projects/king_county/data/input/nets_from_tanya_20131211/KingCounty_finalxy_flag.csv 
+copy  W:/GIS/Projects/king_county/data/input/nets_from_tanya_20131219/KingCountyONLY_census_qr.dta delim W:/GIS/Projects/king_county/data/input/nets_from_tanya_20131219/KingCountyONLY_census_qr.csv 
 
 quit

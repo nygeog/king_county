@@ -29,19 +29,19 @@ a = pd.read_csv(cy_path + "census_list.txt")
 print "For Tract Polygon Raw and Collapsed Counts"
 for year in range(1990,2011):
 	for flag, flag_abbrev in zip(range(26), flag_abbrevs):
-		b = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/kc_nets_pol_" + str(year) + "_" + str(flag) + "_raw.txt")
+		b = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/working/kc_nets_pol_" + str(year) + "_" + str(flag) + "_raw.txt")
 
 		merged = pd.merge(a, b, how='left', on='tractid')
 
-		def_file = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/kc_nets_pol_" + str(year) + "_" + str(flag) + "_col.txt")
+		def_file = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/working/kc_nets_pol_" + str(year) + "_" + str(flag) + "_col.txt")
 		allmerged = merged.merge(def_file, how='left', on='tractid')
 
-		allmerged.to_csv(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both.txt", index=False)
+		allmerged.to_csv(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both.txt", index=False)
 
 		print allmerged
 
-		fin = csv.reader(open(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both.txt", 'rb'), delimiter=',')
-		fout = open(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both_clean.txt", 'w')
+		fin = csv.reader(open(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both.txt", 'rb'), delimiter=',')
+		fout = open(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_pol_" + str(year) + "_" + str(flag) + "_both_clean.txt", 'w')
 
 		for row in fin:
   			for item, i in zip(row, range(3)):
@@ -58,19 +58,19 @@ for year in range(1990,2011):
 print "For Tract Centroid 5 km Buffer Raw and Collapsed Counts"
 for year in range(1990,2011):
 	for flag, flag_abbrev in zip(range(26), flag_abbrevs):
-		b = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/kc_nets_5km_" + str(year) + "_" + str(flag) + "_raw.txt")
+		b = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/working/kc_nets_5km_" + str(year) + "_" + str(flag) + "_raw.txt")
 
 		merged = pd.merge(a, b, how='left', on='tractid')
 
-		def_file = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/kc_nets_5km_" + str(year) + "_" + str(flag) + "_col.txt")
+		def_file = pd.read_csv(pr_path + "/tables/nets_year_flag_tables/working/kc_nets_5km_" + str(year) + "_" + str(flag) + "_col.txt")
 		allmerged = merged.merge(def_file, how='left', on='tractid')
 
-		allmerged.to_csv(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both.txt", index=False)
+		allmerged.to_csv(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both.txt", index=False)
 
 		print allmerged
 
-		fin = csv.reader(open(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both.txt", 'rb'), delimiter=',')
-		fout = open(pr_path + "/tables/nets_year_flag_tables/_out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both_clean.txt", 'w')
+		fin = csv.reader(open(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both.txt", 'rb'), delimiter=',')
+		fout = open(pr_path + "/tables/nets_year_flag_tables/out/kc_nets_5km_" + str(year) + "_" + str(flag) + "_both_clean.txt", 'w')
 
 		for row in fin:
   			for item, i in zip(row, range(3)):
