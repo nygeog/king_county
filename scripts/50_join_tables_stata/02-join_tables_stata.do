@@ -17,4 +17,4 @@ drop _merge
 merge m:1 BEH_ID using "W:\GIS\Projects\king_county\data\processing\tables\utm_xy_round\utm_xy_round.dta"
 drop _merge
 
-save "W:\GIS\Projects\king_county\data\output\kings_county_census.dta", replace
+save "W:\GIS\Projects\king_county\data\output\king_county_census.dta", replace

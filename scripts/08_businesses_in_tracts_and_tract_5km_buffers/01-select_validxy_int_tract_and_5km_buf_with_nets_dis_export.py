@@ -45,6 +45,16 @@ print 'intersect tract - centroid 5 km buffer and businesses (nets) (17 minutes)
 print 'start: ' + time.strftime('%c') 
 arcpy.Intersect_analysis(work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000_centroid_5km_buf #;"+work_path+"/nets_tract_intersects.gdb/king_county_pts_restricted_final_accuracy_pts #",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_5km_nets_int","ALL","#","INPUT")
 
+print 'spatial join tracts to businesses (nets) (1.5 minutes)'
+print 'start: ' + time.strftime('%c') 
+arcpy.SpatialJoin_analysis(work_path+"/nets_tract_intersects.gdb/king_county_pts_restricted_final_accuracy_pts",work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000",                 work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_pol_nets_spj","JOIN_ONE_TO_ONE","KEEP_ALL","#","INTERSECT","#","#")
+print 'spatial join tracts - centroid 5 km buffer (ONE_TO_MANY) to businesses (nets) (23.5 minutes)'
+print 'start: ' + time.strftime('%c') 
+arcpy.SpatialJoin_analysis(work_path+"/nets_tract_intersects.gdb/king_county_pts_restricted_final_accuracy_pts",work_path+"/census_tract_centroid_buffers.gdb/utm_z10n/tracts_2000_centroid_5km_buf",work_path+"/nets_tract_intersects.gdb/utm_z10n/tract_5km_nets_spj","JOIN_ONE_TO_MANY","KEEP_ALL","#","INTERSECT","#","#")
+
+
+
+
 # Selects and Table processing
 # -----------------------------------------------------------------------------------------------------------------
 
