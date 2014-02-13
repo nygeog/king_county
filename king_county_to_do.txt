@@ -1,6 +1,6 @@
 
  
-I met with Gina this morning and we came up with the following procedure for NETS, in order of priority:
+I met with — this morning and we came up with the following procedure for NETS, in order of priority:
  
 As soon as the re-geocoded Geosupport locations (g1/g2) are ready, please give them to me so I can update the final_xy.  I will flip this back to you very quickly.  Also, please provide me with the King County data as soon as a census tract id is appended for the final_xys.  From what I understood yesterday, both of these are very near completion.
  
@@ -13,6 +13,4 @@ b.      We would like to collapse our NY NETS data first, then collapse King Cou
 3.       Gina would like the population and land area and business counts for all King County census tracts, not just the ones UW provided data on
 4.      Instead of ZCTA for King County, Gina is interested in characterizing a 5km buffer from the census tract centroid.
 
-Please let us know if you have any questions or concerns with any of these.
- 
-Thanks for your help!
+
